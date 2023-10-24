@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML</title>
+  </head>
+  <body>
+    <form action="">
+      <!-- input 태그 -->
+      <input type="button" value="버튼" />
+      <input type="text" placeholder="아이디" />
+      <input type="password" placeholder="패스워드" />
+      <input type="checkbox" name="fruits" value="apple" /> apple
+      <input type="checkbox" name="fruits" value="banana" />banana
+
+      <input type="radio" name="gender" value="man" />남
+      <input type="radio" name="gender" value="woman" />여
+
+      <!-- 시간선택 불가능 -->
+      <input type="date" name="calendar" />
+
+      <select name="박스이름" id="">
+        <optgroup label="1번그룹" disabled></optgroup>
+        <option value="아메리카노">아메리카노</option>
+        <option value="카페라떼">카페라떼</option>
+        <option value="바닐라라떼">바닐라라떼</option>
+
+        <optgroup label="주스" disabled></optgroup>
+        <option value="딸기">딸기</option>
+        <option value="바나나">바나나</option>
+        <option value="오렌지">오렌지</option>
+      </select>
+    </form>
+
+    <h1>설문조사</h1>
+    <form>
+      <input type="text" />
+      <input type="email" />
+
+      <h2>나이</h2>
+      <input type="radio" checked />10대 <input type="radio" />20대
+      <input type="radio" />30대 <input type="radio" />40대
+      <input type="radio" />50대 <input type="radio" />60대 이상
+
+      <h2>원하는 강의(복수응답가능합니다.)</h2>
+      <div>
+        <input type="checkbox" checked />html
+        <input type="checkbox" /> javascript <input type="checkbox" /> css
+      </div>
+
+      <br />
+
+      <textarea
+        cols="60"
+        rows="10"
+        placeholder="하고 싶은말을 써주세요 :)"
+      ></textarea>
+
+      <input type="button" value="제출" />
+    </form>
+  </body>
+</html>
