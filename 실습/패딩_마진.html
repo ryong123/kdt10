@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>margin</title>
+    <style>
+      .orange {
+        width: auto;
+        height: 200px;
+        background-color: orange;
+      }
+
+      .orange div {
+        display: inline-block;
+        margin-right: 30px;
+        width: 200px;
+        height: 100px;
+      }
+      .orange div:nth-child(1) {
+        background-color: skyblue;
+      }
+      .orange div:nth-child(2) {
+        background-color: green;
+      }
+      .orange div:nth-child(3) {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 큰 오렌지 부모박스 생성 -->
+    <div class="orange">
+      <!-- 오렌지 박스 안에 자식 3명의 박스를 생성 -->
+      <div>HTML</div>
+      <div>CSS</div>
+      <div>Javascript</div>
+    </div>
+  </body>
+</html>
