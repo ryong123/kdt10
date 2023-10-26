@@ -1,0 +1,118 @@
+html {
+  background-color: gray;
+}
+body {
+  height: 100%;
+}
+.main-box {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 630px;
+  height: 238px;
+  background-color: #fef2ce;
+  border-radius: 25px;
+  display: flex;
+}
+
+.main-container {
+  padding: 28px;
+}
+
+.main-container div img {
+  width: 58px;
+  height: 58px;
+  border-radius: 20px;
+}
+.main-container div p:nth-child(2) {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.container {
+  width: 100%;
+}
+
+.container p {
+  margin: 5px 0px 0 0;
+  font-size: 15px;
+}
+
+.container i {
+  margin-top: 12px;
+  margin-right: 10px;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  /* 세로 중앙 정렬을 위해 추가 */
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+}
+
+.second-box {
+  margin-top: 58px;
+  margin-left: 200px;
+  position: relative;
+}
+
+.second-box i:nth-child(2) {
+  margin-left: 40px;
+  border: 1px solid;
+  font-size: 11px;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+.hidden {
+  margin-top: 10px;
+  width: 200px;
+  height: 10px;
+  background-color: #ddd;
+  position: relative;
+  overflow: hidden;
+  padding: 0px;
+  border-radius: 40px;
+}
+
+.hidden div {
+  height: 100%;
+  width: 70%;
+  background-color: orange;
+  padding: 0px;
+}
+
+.follow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  text-align: right;
+}
+
+.follow button {
+  background-color: #13143b;
+  color: white;
+  padding: 10px 45px;
+  border-radius: 10px;
+}
+
+.follow p {
+  margin-bottom: 15px;
+}
+
+.follow p span {
+  font-size: 20px;
+  font-weight: bold;
+}
