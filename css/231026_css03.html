@@ -1,7 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>선택자</title>
     <style>
+      /* 가상 클래스 */
+      /* 마우스 커서 올렸을 때 */
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        background-color: black;
+        color: white;
+        text-decoration: none;
+      }
+
+      /* 마우스를 클릭하고 있는 동안 */
+      a:active {
+        background-color: palegoldenrod;
+        color: red;
+      }
+
+      /* 마우스를 클릭 하는 동안 */
+      input:focus {
+        background-color: yellow;
+      }
+
       /* first-child */
       .fruits span:first-child {
         color: red;
@@ -25,6 +48,9 @@
       .fruits *:nth-child(2n) {
         background-color: yellow;
       }
+      .fruits *:nth-child(2n + 1) {
+        text-decoration: line-through;
+      }
 
       /* span이 아닌것들 */
       .fruits *:not(span) {
@@ -33,12 +59,20 @@
       }
     </style>
   </head>
-
   <body>
+    <a href="https://naver.com">네이버</a>
+    <br />
+    <input type="text" />
+
+    <hr />
+
     <div class="fruits">
       <span>딸기</span>
       <span>수박</span>
-      <div>오렌지</div>
+      <div>
+        자식 오렌지
+        <div>하위 오렌지</div>
+      </div>
       <p>망고</p>
       <h3>사과</h3>
     </div>
