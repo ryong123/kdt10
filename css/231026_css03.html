@@ -57,6 +57,28 @@
         color: blueviolet;
         background-color: lightblue;
       }
+
+      /* 가상 요소 선택자 */
+      /* befor */
+      .fruits::before {
+        content: "과일 목록 시작😊";
+      }
+      .fruits::after {
+        content: "과일 목록 끝😒";
+      }
+
+      /* 속성 선택자 */
+      /* 속성이 readonly 것만 배경색상 변경 */
+      [readonly] {
+        background-color: lightgray;
+      }
+
+      /* 전체 태그에서 placeholder만 제외하고 나머지 전체 배경색 변경 */
+      *:not([placeholder]) {
+        background-color: beige;
+      }
+
+      /* css 선택자 우선순위 */
     </style>
   </head>
   <body>
@@ -75,6 +97,12 @@
       </div>
       <p>망고</p>
       <h3>사과</h3>
+    </div>
+    <div>
+      <hr />
+      <input type="text" />
+      <input type="text" readonly />
+      <input type="password" placeholder="패스워드" />
     </div>
   </body>
 </html>
