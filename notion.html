@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>display</title>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calc() 함수 예제</title>
     <style>
-      .inline {
-        /* 요소 크기만큼만 yellow 배경색상 설정 */
-        background-color: yellow;
-        /* width: 100px; with 사용불가능 */
-      }
-      .block {
-        /* 전체 한 줄을 차지 */
-        background-color: orange;
-
-        /* 넓이가 100px만큼 줄어듦 */
-        width: 100px;
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
       }
 
-      .inline-block {
-        display: inline-block;
-        background-color: red;
-        width: 150px;
-        height: 25px;
+      .container {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .column {
+        float: left;
+        width: calc(50% - 20px);
+        margin: 10px;
+        box-sizing: border-box;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
       }
     </style>
   </head>
   <body>
-    <!-- inline & block -->
-    <span class="inline">Hello</span>
-    <span class="inline">world</span>
+    <div class="container clearfix">
+      <div class="column">
+        <h2>컬럼 1</h2>
+        <p>이곳에는 첫 번째 컬럼의 내용이 들어갑니다.</p>
+      </div>
 
-    <!-- div 안에 div 가능 -->
-    <div class="block">
-      <div>hello block</div>
+      <div class="column">
+        <h2>컬럼 2</h2>
+        <p>
+          두 번째 컬럼은 첫 번째와 동일한 너비를 가지며 여백이 포함된
+          상태입니다.
+        </p>
+      </div>
     </div>
-
-    <span>span</span>
-
-    <!-- 블럭이면서 inline의 요소가 들어간다 
-    동시에 블럭요소도 가지고있기 때문에 크기 조절 가능 -->
-    <div class="inline-block">inline-block</div>
   </body>
 </html>

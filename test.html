@@ -5,33 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .gauge-container {
-        width: 200px; /* 게이지의 전체 너비 */
-        height: 20px; /* 게이지의 높이 */
-        background-color: #ddd; /* 게이지의 배경색 */
-        position: relative;
-        overflow: hidden;
+      body {
+        margin: 0;
+        background-color: antiquewhite;
+      }
+      .box1 {
+        background-color: red;
+        width: calc(50% - 20px);
+        margin: 0 10px;
       }
 
-      .gauge-fill {
-        height: 100%;
-        width: 50%; /* 게이지가 차있는 정도를 나타냅니다. 100%일 경우 게이지가 완전히 찬 상태입니다. */
-        background-color: #4caf50; /* 게이지의 채워진 부분의 색상 */
+      .main2 {
+        background-color: white;
+        border: 1px solid black;
+        height: 100px;
       }
-
-      .gauge-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: #000; /* 텍스트 색상 */
+      .box2 {
+        width: calc(50% - 10px);
+        background-color: blue;
       }
     </style>
   </head>
   <body>
-    <div class="gauge-container">
-      <div class="gauge-fill"></div>
-      <div class="gauge-text">50%</div>
+    <div class="box1">KDT</div>
+    <br />
+    <div class="main2">
+      <div class="box2">kdt</div>
     </div>
   </body>
 </html>
