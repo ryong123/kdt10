@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calc_lin_height</title>
+    <style>
+      .one {
+        /* 10퍼 센트 */
+        width: 10vw;
+        /* 10퍼 센트 */
+        height: 10vw;
+        background-color: bisque;
+        text-align: center;
+        line-height: 10vw;
+        /* 현재 화면 기준 전체 세로 길이 (100vh) - 정사각형의 세로 길이 (10vw) 나누기 2 해서 위, 아래에 마진 주기 */
+        margin: calc((100vh - 10vw) / 2) auto;
+      }
+    </style>
+  </head>
+  <body style="margin: 0px">
+    <div class="one">KDT</div>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kanit:ital@1&family=Nanum+Gothic+Coding&family=Nanum+Pen+Script&display=swap");
+      body {
+        margin: 0px;
+        color: #007bff;
+        font-family: "Nanum Pen Script", cursive;
+        font-size: 21px;
+      }
+
+      h1 {
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 50%;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      h3 {
+        width: 50%;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        background-color: #007bff;
+        color: white;
+      }
+      .main-box {
+        margin: auto;
+        padding: 1em;
+        width: 50%;
+        height: 50%;
+        border: 1px solid #007bff;
+        text-align: center;
+        border-radius: 10%;
+        background-color: rgb(250, 244, 237);
+        opacity: 0.95;
+      }
+      input [type="button"] {
+        background-color: #007bff;
+      }
+
+      textarea {
+        border-radius: 10px;
+      }
+      textarea[placeholder] {
+        color: red;
+      }
+
+      .btn {
+        margin-top: 10px;
+        padding: px 15px;
+        border-style: none;
+        border-radius: 10px;
+        background-color: #007bff;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-box">
+      <h1>설문조사</h1>
+      <form>
+        이름<input type="text" /> 이메일<input type="email" />
+
+        <h3>나이를 선택해주세요</h3>
+        <input type="radio" checked />10대 <input type="radio" />20대
+        <input type="radio" />30대 <input type="radio" />40대
+        <input type="radio" />50대 <input type="radio" />60대 이상
+
+        <h3>원하는 강의(복수응답가능)</h3>
+        <div>
+          <input type="checkbox" checked />html
+          <input type="checkbox" /> javascript <input type="checkbox" /> css
+        </div>
+
+        <br />
+
+        <textarea
+          cols="60"
+          rows="10"
+          placeholder="하고 싶은말을 써주세요 :)"
+        ></textarea>
+
+        <input class="btn" type="button" value="제출" />
+      </form>
+    </div>
+  </body>
+</html>

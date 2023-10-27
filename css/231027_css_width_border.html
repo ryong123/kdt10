@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>width & height</title>
+
+    <style>
+      /* border */
+      .border {
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        border: 1px solid bisque;
+      }
+      .square {
+        width: 100px;
+        height: 100px;
+        border: 1px solid;
+        display: inline-block;
+        text-align: center;
+      }
+      .d-none {
+        /* display: none; */
+        background-color: red;
+      }
+      .invisible {
+        /* visibility: hidden; */
+        background-color: orangered;
+      }
+      .opacity-0 {
+        /* opacity: 0; */
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body style="margin: 0px">
+    <div style="background-color: aqua; width: 100px; height: 100px"></div>
+    <div
+      style="background-color: aquamarine; width: 100vw; height: 100px"
+    ></div>
+    <!-- max, min -->
+    <div
+      style="
+        background-color: orange;
+        width: calc(30vw-100px);
+        height: 30vw;
+        max-width: 300px;
+        min-width: 200px;
+      "
+    ></div>
+
+    <!-- border -->
+
+    <div class="border" style="border-radius: 10px"></div>
+    <div class="border" style="border-radius: 10%"></div>
+    <div class="border" style="border-radius: 30%"></div>
+    <div class="border" style="border-radius: 50%"></div>
+  </body>
+
+  <!-- visibility -->
+  <div class="square">original</div>
+  <div class="square d-none">d-none</div>
+  <div class="square invisible">invisible</div>
+  <div class="square opacity-0">opacity</div>
+  <div class="square">original</div>
+
+  <!-- overfolow -->
+  <div class="square" style="overflow: scroll">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere libero
+    laboriosam ducimus odit deleniti nemo doloremque, error maxime alias
+    officiis voluptatem explicabo, dolor possimus, inventore quo adipisci
+    doloribus suscipit accusantium? Aspernatur sequi, et ducimus repellat ullam
+    quas culpa! Quas similique tenetur neque totam iusto, itaque quibusdam
+    doloribus, dolore suscipit quod magnam quam temporibus officia nemo, aut
+    reprehenderit corporis aspernatur praesentium!
+  </div>
+  <div class="square" style="overflow: auto">
+    over flow doloribus, dolore suscipit quod magnam quam temporibus officia
+    nemo, aut
+  </div>
+</html>

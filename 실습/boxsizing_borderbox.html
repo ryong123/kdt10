@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>boxsizing_VS_borderbox</title>
+    <style>
+      .box-sizing {
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 15px solid red;
+        background-color: orange;
+      }
+
+      .square {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- box-sizing -->
+    <div class="box-sizing" style="box-sizing: content-box">content-box</div>
+    <br /><br />
+    <div class="box-sizing" style="box-sizing: border-box">border-box</div>
+
+    <!-- overfolow -->
+    <div class="square">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere libero
+      laboriosam ducimus odit deleniti nemo doloremque, error maxime alias
+      officiis voluptatem explicabo, dolor possimus, inventore quo adipisci
+      doloribus suscipit accusantium? Aspernatur sequi, et ducimus repellat
+      ullam quas culpa! Quas similique tenetur neque totam iusto, itaque
+      quibusdam doloribus, dolore suscipit quod magnam quam temporibus officia
+      nemo, aut reprehenderit corporis aspernatur praesentium!
+    </div>
+    <div class="square">over flow</div>
+  </body>
+</html>
