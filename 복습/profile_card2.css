@@ -1,0 +1,64 @@
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+}
+.main-box {
+  background-image: url(./석양\ 일러스트\ ai\ 무료다운로드\ free\ sunset\ image\ download\ -\ \ Urbanbrush.jfif);
+  height: 100vh;
+  /* 전체 덮어쓴다. */
+  background-size: cover;
+  /* 반복하지 않는다. */
+  background-repeat: no-repeat;
+  /* 포커싱을 중앙으로 */
+  background-position: center center;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profilebox {
+  background-color: rgb(102, 97, 97, 0.6);
+  border-radius: 0.3rem;
+  width: 16rem;
+  height: 23rem;
+  display: flex;
+  justify-content: center;
+}
+.img-box {
+  text-align: center;
+  color: white;
+}
+.img-box > p:nth-child(2) {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.img-box > p:nth-child(3) {
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+.img-box img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-top: 2rem;
+}
+
+.icon-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  line-height: 2.3rem;
+}
+i {
+  background-color: rgb(102, 97, 97, 0.6);
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  border: 1px solid rgb(102, 97, 97, 0.6);
+  margin: 0 0.2rem;
+  box-shadow: 2px 2px 1px 1px rgba(12, 12, 12, 0.3);
+}
