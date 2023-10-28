@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position</title>
+    <style>
+      body {
+        height: 500vh;
+        margin: 0px;
+        font-size: 15px;
+        text-align: center;
+        line-height: 100px;
+        font-weight: bold;
+        color: white;
+      }
+      .con {
+        border: 1px solid black;
+        width: 500px;
+        height: 500px;
+        position: relative;
+      }
+      .item {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+      }
+      .item1 {
+        position: relative;
+        background-color: orange;
+        left: 50px;
+        top: 30px;
+        width: 100px;
+        height: 100px;
+      }
+      .item2 {
+        position: absolute;
+        background-color: yellow;
+        right: 30px;
+        bottom: 100px;
+        width: 100px;
+        height: 100px;
+      }
+      .item3 {
+        position: fixed;
+        background-color: green;
+        right: 100px;
+        top: 100px;
+        width: 100px;
+        height: 100px;
+      }
+
+      /* 
+      
+      */
+    </style>
+  </head>
+  <body>
+    <div class="con">
+      <div class="item"></div>
+      <div class="item1">item1</div>
+      <div class="item2">item2</div>
+      <div class="item3">item3</div>
+    </div>
+  </body>
+</html>

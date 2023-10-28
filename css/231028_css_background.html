@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: orange;
+        width: 500px;
+        height: 500px;
+      }
+      .background-img {
+        /* img 이용 */
+        background-image: url("https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a");
+
+        /* 1. background-repat */
+        background-repeat: repeat; /* default*/
+        background-repeat: repeat-x;
+        background-repeat: repeat-y;
+        background-repeat: no-repeat;
+        /* background-position */
+        /* background-position: left;
+        background-position: left top;
+        background-position: center;
+        background-position: 10px 100px; */
+        /* background-position: 100px; */
+
+        background-size: auto; /* default*/
+        background-size: 100px;
+        background-size: 100px 50px; /*x축, y축*/
+
+        background-size: contain;
+      }
+      /* background-attachment */
+      .background-attach {
+        width: 300px;
+        height: 300px;
+        overflow: scroll;
+        background-image: url("https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861f604e7b0e6900f9ac53a43965300eb9a");
+        /* background-attachment: local; */
+
+        /* background-attachment: scroll; */
+        /* viewport 기준 */
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="background-img"></div>
+    <div class="background-attach">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quasi
+      voluptate deserunt, sit nulla, tempore modi provident minus, beatae quod
+      voluptatum. Nostrum, neque omnis! Eveniet ipsam laboriosam deserunt illum
+      consectetur? Eos impedit odio non perspiciatis commodi deleniti quasi in,
+      minus perferendis inventore quia dolores fuga asperiores voluptatibus
+      illum quibusdam ratione voluptatem? Dicta eius architecto neque vitae,
+      quod sit voluptatibus mollitia? Consequatur veritatis, accusamus aliquam
+      dolores quaerat quibusdam? Voluptatem, culpa officiis. Amet mollitia
+      quaerat deleniti at quia, cupiditate quidem accusantium quas autem dolores
+      molestiae repellendus unde tempora itaque aperiam, veritatis odio? Quod
+      tempore, officiis amet, fugit aut ipsam, animi quisquam quam velit nemo
+      neque libero iure repudiandae dicta adipisci dolores nobis minima?
+      Deleniti tempore, beatae aut ex harum molestiae sunt vel. Lorem ipsum
+      dolor sit amet consectetur adipisicing elit. Molestias quasi voluptate
+      deserunt, sit nulla, tempore modi provident minus, beatae quod voluptatum.
+      Nostrum, neque omnis! Eveniet ipsam laboriosam deserunt illum consectetur?
+      Eos impedit odio non perspiciatis commodi deleniti quasi in, minus
+      perferendis inventore quia dolores fuga asperiores voluptatibus illum
+      quibusdam ratione voluptatem? Dicta eius architecto neque vitae, quod sit
+      voluptatibus mollitia? Consequatur veritatis, accusamus aliquam dolores
+      quaerat quibusdam? Voluptatem, culpa officiis. Amet mollitia quaerat
+      deleniti at quia, cupiditate quidem accusantium quas autem dolores
+      molestiae repellendus unde tempora itaque aperiam, veritatis odio? Quod
+      tempore, officiis amet, fugit aut ipsam, animi quisquam quam velit nemo
+      neque libero iure repudiandae dicta adipisci dolores nobis minima?
+      Deleniti tempore, beatae aut ex harum molestiae sunt vel.
+    </div>
+  </body>
+</html>
