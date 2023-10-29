@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CardUI</title>
+    <link rel="stylesheet" href="/복습/cardUI.css" />
+  </head>
+  <body>
+    <div class="main-box">
+      <button id="previous_btn"><i><</i></button>
+      <div class="one-box">
+        <div class="img-box">
+          <img
+            src="https://i.pinimg.com/564x/ee/5d/45/ee5d45c079706026f24289bbfef09763.jpg"
+            alt=""
+          />
+        </div>
+        <div class="text-box">
+          <p>T E A V E L</p>
+          <p class="title">Mountains</p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Laudantium, eos deleniti. Praesentium officia reiciendis eius,
+            provident ratione
+          </p>
+          <button class="btn">Read more</button>
+        </div>
+      </div>
+      <div class="one-box">
+        <div class="img-box">
+          <img
+            src="https://i.pinimg.com/564x/58/00/5e/58005e4f4e5ca20d3b62e61f4c9cff48.jpg"
+            alt=""
+          />
+        </div>
+        <div class="text-box">
+          <p class="">TEAVEL</p>
+          <p class="title">City</p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Laudantium, eos deleniti. Praesentium officia reiciendis eius,
+            provident ratione
+          </p>
+          <button class="btn">Read more</button>
+        </div>
+      </div>
+      <div class="one-box">
+        <div class="img-box">
+          <img
+            src="https://i.pinimg.com/564x/2a/0d/cc/2a0dcc8b5c3d68bac5cfd94f10ba3f6f.jpg"
+            alt=""
+          />
+        </div>
+        <div class="text-box">
+          <p>TEAVEL</p>
+          <p class="title">Coast</p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Laudantium, eos deleniti. Praesentium officia reiciendis eius,
+            provident ratione
+          </p>
+          <button class="btn">Read more</button>
+        </div>
+      </div>
+      <button id="next_btn">></button>
+    </div>
+
+    <script>
+      document
+        .getElementById("next_btn")
+        .addEventListener("click", function () {
+          // 다음 페이지의 URL을 여기에 입력합니다.
+          let nextPageURL =
+            "http://127.0.0.1:5500/%EB%B3%B5%EC%8A%B5/cardUI.html";
+
+          // 슬라이딩 효과 클래스 추가
+          document.body.classList.add("slide-out");
+
+          // 슬라이딩 애니메이션이 완료된 후 다음 페이지로 이동
+          setTimeout(function () {
+            window.location.href = nextPageURL;
+          }, 500);
+        });
+
+      // 페이지 로드시 슬라이딩 효과 클래스를 추가하여 애니메이션 효과를 적용
+      window.onload = function () {
+        document.body.classList.add("transitioning");
+      };
+    </script>
+  </body>
+</html>
