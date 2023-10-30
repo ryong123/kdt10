@@ -4,41 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      .container {
-        width: 500px;
-        height: 500px;
-      }
-      .container div {
-        width: 100px;
-        height: 100px;
-      }
-      x .item1 {
-        background-color: rebeccapurple;
-        position: absolute;
-        z-index: 5;
-      }
-      .item2 {
-        background-color: aqua;
-        position: absolute;
-        top: 30px;
-        left: 30px;
-        z-index: 3;
-      }
-      .item3 {
-        background-color: antiquewhite;
-        position: absolute;
-        top: 60px;
-        left: 60px;
-        z-index: 7;
-      }
-    </style>
   </head>
   <body>
-    <div class="container">
-      <div class="item1"></div>
-      <div class="item2"></div>
-      <div class="item3"></div>
-    </div>
+    <h2 id="hello">안녕하세요[변경전]</h2>
+    <script>
+      document.getElementById("hello").innerHTML = "안녕하세요[변경후]";
+    </script>
   </body>
 </html>

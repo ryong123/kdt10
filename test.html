@@ -4,33 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      body {
-        margin: 0;
-        background-color: antiquewhite;
-      }
-      .box1 {
-        background-color: red;
-        width: calc(50% - 20px);
-        margin: 0 10px;
-      }
 
-      .main2 {
-        background-color: white;
-        border: 1px solid black;
-        height: 100px;
+    <style>
+      #box {
+        display: flex;
       }
-      .box2 {
-        width: calc(50% - 10px);
-        background-color: blue;
+      li {
+        list-style: none;
+        padding: 1rem;
+      }
+      #menu-box ol {
+        padding: 0;
+      }
+      #menu-box ol li {
+        text-align: center;
+      }
+      #menu-box {
+        width: 100%;
+        background-color: black;
+        color: white;
+        display: none;
+        transition: max-height 0.5s ease-out;
       }
     </style>
   </head>
   <body>
-    <div class="box1">KDT</div>
-    <br />
-    <div class="main2">
-      <div class="box2">kdt</div>
+    <div>
+      <ol id="box">
+        <li>
+          메뉴1번
+          <button
+            onclick="document.getElementById('menu-box').style.display='block';"
+          >
+            클릭
+          </button>
+          <div id="menu-box">
+            <ol id="menubar">
+              <li>메뉴1</li>
+              <li>메뉴2</li>
+              <li>메뉴3</li>
+              <li>메뉴4</li>
+            </ol>
+            <button
+              onclick="document.getElementById('menu-box').style.display='none';"
+            >
+              x
+            </button>
+          </div>
+        </li>
+        <li>메뉴2번</li>
+      </ol>
     </div>
   </body>
 </html>

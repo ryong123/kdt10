@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+    <style>
+      .boll {
+        width: 100px;
+        height: 100px;
+        border: 50%;
+        background-color: pink;
+        position: absolute;
+        border-radius: 50%;
+
+        /* 애니메이션 이름 */
+        animation: move;
+
+        /* 애니메이션 6번 반복 */
+        animation-iteration-count: 6;
+
+        /* 3초간 애니메이션 진행 */
+        animation-duration: 3s;
+      }
+      @keyframes move {
+        0% {
+          top: 0;
+          left: 0;
+        }
+        25% {
+          top: 0px;
+          left: 500px;
+        }
+        50% {
+          top: 500px;
+          left: 500px;
+        }
+        75% {
+          top: 500px;
+          left: 0px;
+        }
+        100% {
+          top: 0;
+          left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boll"></div>
+  </body>
+</html>

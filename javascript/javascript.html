@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>getElementById 예제</title>
+    <link rel="stylesheet" href="/javascript/javascript.css" />
+  </head>
+  <body>
+    <h1 id="hello">안녕하세요</h1>
+    <h1 id="hi">JS 초보에요</h1>
+    <div class="alert-box" id="alert">알림창임</div>
+
+    <!-- onclick -> 자바스크립트 작성가능 버튼클릭시 코드 실행 -->
+    <button onclick="document.getElementById('alert').style.display='block'">
+      버튼
+    </button>
+    <button onclick="작명()">닫기</button>
+
+    <script>
+      // document. : 문서의
+      //  요소아이디를 get해라 id가 hello인것을
+      // innerHTML = 내부 html 내용을 안녕으로 바꿔달라
+      // = 오른쪽 값을 왼쪽으로 넣어라
+      document.getElementById("hello").innerHTML = "안녕";
+
+      // style.color => 색상을 레드로 변경해라
+      document.getElementById("hello").style.color = "red";
+
+      // .getElementById("hello") 셀렉터라고함
+
+      //길게 코드짜는이유 ? 프로그래밍이라고함. 모든 프로그래밍은 일시키는행위
+      // 컴퓨터는 일만잘하고 지능스탯은 0 그래서 구체적으로 설명이 필요함.
+      document.getElementById("hi").innerHTML = "JS고수에요";
+
+      // font-size 16px로 변경
+      document.getElementById("hello").style.fontSize = "16px";
+
+      // alert 박스 만들기
+      // UI 만드는 step
+      // 미리 HTML/CSS로 디자인
+      // 필요할 때 보여달라고 코드짠다(jvaScrip로)
+
+      // function 사용법 function (함수)
+      function 작명() {
+        document.getElementById("alert").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

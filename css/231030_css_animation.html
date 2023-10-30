@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        /* 시간이 지남에 따라 위치가 변경되는 애니메이션 */
+        position: absolute;
+
+        /* 애니메이션 이름 */
+        animation-name: myanim;
+        animation-duration: 2s;
+        /* 애니메이션 반복횟수 */
+        animation-iteration-count: infinite;
+        /* 어떤 속성? */
+        animation-timing-function: ease;
+        /* 1초 후에 작동하게끔 */
+        animation-delay: 1s;
+      }
+
+      @keyframes myanim {
+        0% {
+          left: 0px;
+          top: 0px;
+        }
+        25% {
+          left: 100px;
+          top: 100px;
+        }
+        50% {
+          left: 200px;
+          top: 200px;
+        }
+        75% {
+          left: 100px;
+          top: 300px;
+        }
+
+        100% {
+          left: 0px;
+          top: 400px;
+        }
+      }
+    </style>
+    <title>Animation</title>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+  </body>
+</html>

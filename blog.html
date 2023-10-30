@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 10rem;
+        height: 3rem;
+        margin-left: 3rem;
+        border: 1px solid black;
+      }
+      #img1 {
+        /* 10도를 기울인다. */
+        transform: rotate(10deg);
+      }
+      #img2 {
+        /* 1.5배 커진다 */
+        transform: scale(1.5);
+      }
+      #img3 {
+        /* 30도 기울인다. */
+        transform: skew(30deg);
+      }
+      /* x축, y축 10px씩 이동 */
+      #img4:hover {
+        transform: translate(10px, 10px);
+        transition: all 1s;
+      }
+      div {
+      }
+      p {
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <p>변경전</p>
+    <div>
+      <img src="/복습/페페.jpg" alt="" />
+      <img src="/복습/페페.jpg" alt="" />
+      <img src="/복습/페페.jpg" alt="" />
+      <img src="/복습/페페.jpg" alt="" />
+    </div>
+
+    <p>변경후</p>
+    <div>
+      <p>rotate (10deg) // 10도를 기울인다.</p>
+      <img id="img1" src="/복습/페페.jpg" alt="" />
+      <p>scale(1.5) // 1.5배 커진다.</p>
+      <img id="img2" src="/복습/페페.jpg" alt="" />
+      <p>skew(30deg) // 30도 기울인다</p>
+      <img id="img3" src="/복습/페페.jpg" alt="" />
+      <p>tanslate(10px, 10px) // x축,y축 10px씩 이동</p>
+      <img id="img4" src="/복습/페페.jpg" alt="" />
+    </div>
+  </body>
+</html>
