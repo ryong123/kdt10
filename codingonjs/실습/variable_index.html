@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let rainbow = [
+        "red",
+        "orange",
+        "yellow",
+        "black",
+        "blue",
+        "navy",
+        "purple",
+      ];
+      console.log(rainbow[2]);
+      console.log(rainbow.push("green"));
+      console.log(rainbow);
+      console.log(rainbow.indexOf("black"));
+      console.log(rainbow.reverse());
+      console.log(rainbow);
+
+      // object
+
+      let profile = {
+        name: "성룡",
+        age: "20대",
+        habbit: "surfing",
+        isCute: false,
+      };
+      console.log(profile);
+      console.log("이름:", profile.name);
+      console.log("나이", profile.age);
+      console.log("취미:", profile.habbit);
+
+      let num = console.log(typeof 1);
+      let str = console.log(typeof "문자");
+
+      console.log(typeof 1, "isn't", typeof "문자", "data tpye.");
+      console.log(
+        "Typeof 를 boolean 이나 null에 사용하면" +
+          typeof {} +
+          "결과를 얻을 수 있습니다."
+      );
+
+      // 형변환
+      let mathScore = prompt("수학 점수를 입력해주세요.");
+      let engScore = prompt("영어 점수를 입력해주세요");
+      console.log(mathScore); // 45
+      console.log(engScore); // 45
+
+      let avg = (Number(mathScore) + Number(engScore)) / 2;
+      console.log(avg);
+    </script>
+  </head>
+  <body></body>
+</html>

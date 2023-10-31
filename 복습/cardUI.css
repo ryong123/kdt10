@@ -1,11 +1,21 @@
 @import url(/복습/reset.css);
+* {
+  box-sizing: border-box;
+}
+header {
+}
 
-body {
-  background: linear-gradient(#f9814d, #f8574d);
-  /* 높이 지정하여 지정*/
-  height: 100vh;
-  transition: 0.5s ease-in-out;
-  overflow-x: hidden;
+html {
+  background: linear-gradient(to right, #f9814d, #f8574d);
+}
+
+h1 {
+  text-align: center;
+  padding: 2rem;
+  font-size: 3rem;
+  color: white;
+  opacity: 0.7;
+  animation: title ease-in-out 10s infinite;
 }
 
 .slide-out {
@@ -22,51 +32,58 @@ body {
 .main-box {
   /* 세로 중앙 정렬을 위해 height */
 
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .one-box {
   background-color: white;
-  width: 15rem;
+  max-width: 20%;
   margin: 1rem;
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
-.img-box > img {
+.img-box {
   width: 100%;
-  /* 이미지의 높이를 주면 깨질 수 있다. */
-  height: 17rem;
+}
+
+.img-box > img {
+  width: 100%; /* 이미지의 높이를 주면 깨질 수 있다. */
   border-bottom: 5px solid #f85f4d;
+}
+.img-box > img:hover {
+  transform: scale(1.2);
 }
 
 .text-box {
   text-align: center;
+  max-width: 100%;
 }
 
 .text-box p:first-child {
   margin-top: 2.5rem;
-
   font-size: 0.9rem;
   opacity: 0.5;
 }
 
 .text-box p:nth-child(3) {
   margin-bottom: 2rem;
+  word-break: break-all;
 }
 
 .title {
   font-weight: bold;
   font-size: 1.5rem;
-  padding: 1.5rem;
+  padding: 1.5%;
+  text-align: center;
+  word-break: break-all;
 }
 
 .btn {
   border: 1px solid #f8574d;
   background-color: white;
   color: #f8574d;
-  width: 8rem;
+  width: 70%;
   padding: 0.5rem;
   text-align: center;
   border-radius: 30px;
@@ -76,4 +93,15 @@ body {
 .btn:focus {
   background-color: #f85f4d;
   color: white;
+}
+
+@keyframes title {
+  0% {
+    width: 100%;
+    margin-left: 100%;
+  }
+  100% {
+    width: 100%;
+    margin-left: -100%;
+  }
 }

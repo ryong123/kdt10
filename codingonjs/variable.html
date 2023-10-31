@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>variable</title>
+    <script>
+      /*
+        자료형
+        - 기본
+            - string
+            - number
+            - boolean
+            - null
+            - undefined
+        - 객체
+            - array
+            - object
+        */
+      // 1. string
+      let myName = "길동";
+      let email = "gildong@naver.com";
+      let city = '"서울"';
+
+      console.log(myName); // 길동
+      console.log(email); // gildong@naver.com
+      console.log(city); // "서울"
+
+      // 문자와 변수를 동시에 출력
+      console.log("내 이름은", myName, "입니다."); // 내 이름은 길동 입니다.
+      console.log("내 이름은" + myName + "입니다."); // 내 이름은길동입니다.
+      //  백틱(``)
+      console.log(`내 이름은 ${myName} 입니다.`); // 내 이름은 길동 입니다.
+
+      let gildong = `내 이름은 ${myName} 입니다.`;
+      console.log(gildong); // 내 이름은 길동 입니다.
+
+      //2. number
+      let number = 123;
+      let opacity = 0.7;
+      console.log(number);
+      console.log(opacity);
+      //NaN : not a number의 약자
+      console.log("apple" - 3); // NaN
+      console.log("123" - 3); // 120 console.log에서 자동 형변환
+
+      //3. boolean
+      let checke = true;
+      let isShow = false;
+      console.log(checke); // true
+      console.log(isShow); // false
+
+      //4. undefined
+      let undef;
+      console.log(undef); //undefined
+
+      //5. null
+      let empty = null;
+      console.log(empty); // null
+
+      //6. arry
+      let fruits = ["orange", "pineapple", "grape", "apple"];
+      let data = [1, "gildong", false, null, undefined];
+      console.log(fruits); // (4) ['orange', 'pineapple', 'grape',  'apple']
+      console.log(data); // (5) [1, 'gildong', 'false', 'null', 'undefined']
+
+      // fruits배열의 0번째 값, 1번째값 을 출력한다
+      console.log(fruits[0], fruits[1]);
+
+      // 2차원 배열 : [ [], [], [] ]
+
+      //배열 함수
+
+      //배열 값을 뒤에 추가
+      fruits.push("banana");
+      console.log(fruits); // (5) ['orange', 'pineapple', 'grape',  'apple', 'banana']
+
+      //뒤의 배열값을 삭제
+      fruits.pop();
+      console.log(fruits); // (4) ['orange', 'pineapple', 'grape',  'apple']
+
+      //배열 앞에 값을 추가
+      fruits.unshift("orange");
+      console.log(fruits); // (5) ['orange', 'orange', 'pineapple', 'grape',  'apple', ]
+
+      //배열 앞에 값을 삭제
+      fruits.shift("orange");
+      console.log(fruits); // (4) ['orange', 'pineapple', 'grape',  'apple']
+
+      //indexof는 fruits에 orange는 몇번째에 있는지?
+      console.log(fruits.indexOf("orange")); // 0
+
+      //fruits배열 안에 orange 있는지 확인
+      console.log(fruits.includes("orange")); // true
+
+      // 7. object
+      let cat = {
+        name: "나비",
+        age: 1,
+        isCuteL: true,
+        // 함수도 객체 안에 넣을 수 있음
+        mew: function () {
+          console.log("야옹");
+        },
+      };
+
+      //전체 출력
+      console.log(cat);
+
+      // cat 오브젝트의 name만 출력
+      console.log(cat.name); // 나비
+
+      console.log(cat.age); // 1
+
+      // typof
+      console.log(typeof "문자"); // String
+      console.log(typeof 1); // int
+      console.log(typeof true); // boolean
+      console.log(typeof cat); // object
+      console.log(typeof fruits); // object
+      console.log(typeof null); // object
+      console.log(
+        "typeof를 array나 null에 사용하면" + typeof {} + "결과를 얻을 수 있다"
+      );
+
+      // 형변환
+      //   let mathScore = prompt("수학 점수를 입력해주세요.");
+      //   let engScore = prompt("영어 점수를 입력해주세요");
+
+      //   let avg = (mathScore + engScore) / 2;
+      //   console.log(avg);
+
+      // 1. 값 -> 문자 String()
+      let str1 = true;
+      let str2 = 123;
+      let str3 = null;
+
+      console.log(typeof String(str1));
+      console.log(typeof String(str2));
+      console.log(typeof String(str3));
+
+      //   console.log(typeof str3.toString);
+
+      // 2. 값 -> 숫자 Number()
+      let n1 = true;
+      let n2 = false;
+      let n3 = 123.9;
+
+      console.log(typeof Number(n1));
+      console.log(typeof Number(n2));
+      console.log(typeof Number(n3));
+
+      console.log(Number(n1));
+      console.log(Number(n2));
+      console.log(Number(n3));
+      console.log(Number("hello"));
+    </script>
+  </head>
+  <body></body>
+</html>

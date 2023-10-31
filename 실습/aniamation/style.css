@@ -9,7 +9,10 @@ body {
 section {
   width: 700px;
   height: 450px;
-  position: relative;
+  background-color: skyblue;
+  animation: sky 5s ease infinite;
+  display: flex;
+  flex-direction: column;
 }
 
 section .sky {
@@ -19,28 +22,35 @@ section .sky {
 
 section .sky .sun {
   width: 180px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
 
 section .sky .moon {
   width: 160px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
 
 section .sky .cloud_1 {
   width: 160px;
+  position: relative;
+  top: 7rem;
 }
 
 section .sky .cloud_2 {
-  width: 90px;
+  width: 80px;
+  position: relative;
+  top: 8rem;
 }
 
 section .city .city_img {
-  width: 100%;
+  width: 50%;
+  top: 5rem;
 }
 .sky {
-  border: 1px solid black;
-  background-color: skyblue;
-  animation: sky 5s ease infinite;
-  position: relative;
 }
 .sun {
   animation: sun 5s ease-in-out infinite;
@@ -49,18 +59,17 @@ section .city .city_img {
   animation: moon 5s ease-in-out infinite;
 }
 .cloud_1 {
-  animation: cloud_1 3s ease-in-out infinite;
-  position: absolute;
-  top: 10rem;
+  animation: cloud_1 5s ease-in-out infinite;
 }
 .cloud_2 {
   animation: cloud_2 4s ease-in-out infinite;
-  position: absolute;
-  top: 14rem;
 }
 .city {
-  animation: city 5s ease-in-out infinite;
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 /*
   참고: 배경 색상 종류
@@ -100,7 +109,7 @@ section .city .city_img {
     opacity: 1;
   }
   50% {
-    opacity: 1;
+    opacity: 0.1;
   }
   75% {
     opacity: 0;
@@ -132,39 +141,49 @@ section .city .city_img {
 
 @keyframes cloud_1 {
   0% {
-    left: 5%;
+    left: 23%;
     opacity: 1;
   }
   25% {
-    opacity: 0.4;
+    opacity: 0.5;
   }
 
   50% {
-    left: 80%;
+    left: 75%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
   }
 
   100% {
-    left: 5%;
+    opacity: 1;
+    left: 23%;
   }
 }
 
 @keyframes cloud_2 {
   0% {
     left: 5%;
+    opacity: 0;
   }
   25% {
+    opacity: 1;
   }
   50% {
-    left: 80%;
+    left: 65%;
+    opacity: 0;
   }
   75% {
+    opacity: 1;
   }
   100% {
+    opacity: 0;
     left: 5%;
   }
 }
 
-@keyframes city {
+/* @keyframes sky {
   0% {
     background-color: #636888;
   }
@@ -175,15 +194,14 @@ section .city .city_img {
     background-color: #fcd2e2;
   }
 
-  /* 밤 */
   75% {
     background-color: #675577;
   }
   100% {
     background-color: #636888;
-  }
+  } 
 }
-
+*/
 /* ANIMATION */
 /* 
   TODO:.5종류의 애니메이션이 필요함
