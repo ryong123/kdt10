@@ -16,17 +16,28 @@
       }
     </style>
   </head>
+
   <body>
-    <div id="box">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    <div id="box">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+      .
+    </div>
+
+    <span></span>
 
     <button onclick="열기()">버튼</button>
-    <button onclick="document.getElementById('box').style.display='none'">
-      닫기
-    </button>
+    <button onclick="닫기()">닫기</button>
 
     <script>
-      function 열기() {
-        document.getElementById("box").style.display = "block";
+      // function = 함수
+      // function 긴코드를 짧게 만들어서 보기편함
+      function 열기(구멍) {
+        document.getElementById("box").style.display = 구멍;
+      }
+      구멍("none");
+
+      function 닫기() {
+        document.getElementById("box").style.display = 닫기;
       }
     </script>
   </body>

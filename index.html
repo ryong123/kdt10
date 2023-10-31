@@ -4,91 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
-    <style>
-      body {
-        height: 100vh;
-      }
-      .nav_bar div {
-        height: 10%;
-        background: skyblue;
-        border: 1px solid black;
-      }
-
-      .nav_bar div ol {
-        display: flex;
-        justify-content: center;
-        margin: 0;
-      }
-      .nav_bar div ol li {
-        background-color: blanchedalmond;
-        list-style: none;
-        padding: 2rem;
-        color: black;
-      }
-      .mainbox {
-        height: 70%;
-        background-color: antiquewhite;
-        border: 1px solid black;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-      }
-
-      .footer {
-        height: 20%;
-        background-color: antiquewhite;
-        border: 1px solid black;
-      }
-      .sec1 {
-        background-color: rebeccapurple;
-        height: 50%;
-        width: 30%;
-      }
-      .sec2 {
-        background-color: aqua;
-        height: 50%;
-        width: 30%;
-      }
-      /* .sec3 {
-        background-color: brown;
-        height: 50%;
-        width: 50%;
-      }
-      .sec4 {
-        background-color: blue;
-        height: 50%;
-        width: 50%;
-      } */
-    </style>
   </head>
   <body>
-    <header class="main-box">
-      <nav class="nav_bar">
-        <div>
-          <ol>
-            <li>메뉴1</li>
-            <li>메뉴2</li>
-            <li>메뉴3</li>
-            <li>메뉴4</li>
-          </ol>
-        </div>
-      </nav>
-    </header>
-    <main class="mainbox">
-      <section class="sec1">
-        <article></article>
-        <article></article>
-        <article></article>
-      </section>
-      <section class="sec2">
-        <article></article>
-        <article></article>
-        <article></article>
-      </section>
-    </main>
-    <div class="footer">
-      <footer></footer>
-    </div>
+    <button onclick="add()">add</button>
+    <button onclick="sub()">sub</button>
+    <button onclick="divdie()">divide</button>
+    <button onclick="mul()">mul</button>
+
+    <script>
+      multifly(7, 3);
+      function multifly(sum1, sum2) {
+        let result = sum1 * sum2;
+        console.log(result);
+      }
+
+      square(4);
+      function square(sum1) {
+        let result = sum1 * sum1;
+        console.log(result);
+      }
+
+      function add(sum1, sum2) {
+        let add = prompt("첫번째 숫자를 입력해주세요");
+        let add2 = prompt("두번째 숫자를 입력해주세요");
+
+        // string -> number 형변환
+        let result = Number(add) + Number(add2);
+        console.log("입력값:", add + "+" + add2 + "=" + result);
+      }
+      function sub(sum1, sum2) {
+        let add = prompt("첫번째 숫자를 입력해주세요");
+        let add2 = prompt("두번째 숫자를 입력해주세요");
+
+        // string -> number 형변환
+        let result = Number(add) - Number(add2);
+        console.log("입력값:", add + "-" + add2 + "=" + result);
+      }
+      function divide(sum1, sum2) {
+        let add = prompt("첫번째 숫자를 입력해주세요");
+        let add2 = prompt("두번째 숫자를 입력해주세요");
+
+        // string -> number 형변환
+        let result = Number(add) * Number(add2);
+        console.log("입력값:", add + "x" + add2 + "=" + result);
+      }
+      function mul(sum1, sum2) {
+        let add = prompt("첫번째 숫자를 입력해주세요");
+        let add2 = prompt("두번째 숫자를 입력해주세요");
+
+        // string -> number 형변환
+        let result = Number(add) / Number(add2);
+        console.log("입력값:", add + "/" + add2 + "=" + result);
+      }
+    </script>
   </body>
 </html>

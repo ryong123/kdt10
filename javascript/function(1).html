@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 500px;
+        height: 100%;
+
+        background-color: black;
+        border-radius: 10px;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="box">
+      <p id="title">아이디 입력하세요</p>
+      <button onclick="닫기('none')" id="close">닫기</button>
+    </div>
+
+    <button onclick="아이디입력()">버튼1</button>
+    <button onclick="비밀번호()">버튼2</button>
+
+    <script>
+      // 1.  버튼 1을 누르면 아이디 입력하세요
+      // 2. 버튼 2를 누르면 비밀번호 입력하세요
+      // 3.  닫기를 누르면 버튼이 닫힘
+      function 닫기(닫을꺼임) {
+        document.getElementById("box").style.display = 닫을꺼임;
+      }
+
+      function 아이디입력() {
+        document.getElementById("title").innerHTML = "아이디 입력하세요.";
+        document.getElementById("box").style.display = "block";
+      }
+      function 비밀번호() {
+        document.getElementById("title").innerHTML = "비밀번호 입력요.";
+        document.getElementById("box").style.display = "block";
+      }
+    </script>
+  </body>
+</html>

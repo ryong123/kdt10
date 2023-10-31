@@ -135,9 +135,9 @@
       let str2 = 123;
       let str3 = null;
 
-      console.log(typeof String(str1));
-      console.log(typeof String(str2));
-      console.log(typeof String(str3));
+      console.log(typeof String(str1)); // string
+      console.log(typeof String(str2)); // string
+      console.log(typeof String(str3)); // string
 
       //   console.log(typeof str3.toString);
 
@@ -146,14 +146,14 @@
       let n2 = false;
       let n3 = 123.9;
 
-      console.log(typeof Number(n1));
-      console.log(typeof Number(n2));
-      console.log(typeof Number(n3));
+      console.log(typeof Number(n1)); // number
+      console.log(typeof Number(n2)); // number
+      console.log(typeof Number(n3)); // number
 
-      console.log(Number(n1));
-      console.log(Number(n2));
-      console.log(Number(n3));
-      console.log(Number("hello"));
+      console.log(Number(n1)); // 1
+      console.log(Number(n2)); // 0
+      console.log(Number(n3)); // 123.9
+      console.log(Number("hello")); //NaN
     </script>
   </head>
   <body></body>
