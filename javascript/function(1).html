@@ -18,29 +18,32 @@
 
   <body>
     <div id="box">
-      <p id="title">아이디 입력하세요</p>
-      <button onclick="닫기('none')" id="close">닫기</button>
+      <p class="title1">아이디 입력하세요</p>
+      <button id="close">닫기</button>
     </div>
 
-    <button onclick="아이디입력()">버튼1</button>
-    <button onclick="비밀번호()">버튼2</button>
+    <button onclick="아이디알림창('아이디 입력요','block')">버튼1</button>
+    <button onclick="아이디알림창('비밀번호 입력요','block')">버튼2</button>
 
     <script>
-      // 1.  버튼 1을 누르면 아이디 입력하세요
-      // 2. 버튼 2를 누르면 비밀번호 입력하세요
-      // 3.  닫기를 누르면 버튼이 닫힘
-      function 닫기(닫을꺼임) {
-        document.getElementById("box").style.display = 닫을꺼임;
+      // close 요소를 click했을때 안에 함수를 실행해라
+
+      //addEventListenr -> 함수
+      //even란-> 클릭,키입력,스크롤,드래그를 말함
+      //.addEventListener("scroll") // 유저가 스크롤하는 이벤트 이벤트리스너는 다양함 감시자라고 생각하면됨
+
+      // 여기 funtion은 콜백함수임 뭔가 순차적으로 실행할때 콜백함수 사용
+      document.getElementById("close").addEventListener("click", function () {
+        document.getElementById("box").style.display = "none";
+      });
+
+      function 아이디알림창(내용, 여닫) {
+        // getElementsByClassNam 클래스로 검색법
+        document.getElementsByClassName("title1")[0].innerHTML = 내용;
+        document.getElementById("box").style.display = 여닫;
       }
 
-      function 아이디입력() {
-        document.getElementById("title").innerHTML = "아이디 입력하세요.";
-        document.getElementById("box").style.display = "block";
-      }
-      function 비밀번호() {
-        document.getElementById("title").innerHTML = "비밀번호 입력요.";
-        document.getElementById("box").style.display = "block";
-      }
+      //클래스명 같은경우 중복될 수 있다. class사용하면 항상 뒤에 인덱싱 해줄것 [0]
     </script>
   </body>
 </html>
