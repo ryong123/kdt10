@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <script>
+    function add(num1, num2) {
+      let sum1 = prompt("첫번째 값을 입력해주세요");
+      let sum2 = prompt("두번째 값을 입력해주세요");
+      let result = Number(sum1) + Number(sum2);
+      alert("더한 값 : " + result);
+      return num1 + num2;
+    }
+    function sub(num1, num2) {
+      let sub1 = prompt("첫번째 값을 입력해주세요");
+      let sub2 = prompt("두번째 값을 입력해주세요");
+      let result = Number(sub1) + Number(sub2);
+      alert("뺀 값 : " + result);
+      return sub1 + sub2;
+    }
+    function divide(sum1, sum2) {
+      return sum1 * sum2;
+    }
+    function mul(sum1, sum2) {
+      return sum1 / sum2;
+    }
+  </script>
+  <body>
+    <!-- add, sub, divide, mul 함수 만들기 
+• 모든 함수들은 2개의 parameter(a, b)을 받아야 하며, 각각 더하기(a+b), 빼기
+(a-b), 곱하기(a*b), 나누기(a/b)의 작업을 해야 함.
+•실행할 때 숫자 2개 입력받기 ( prompt )
+•버튼 4개를 만들고 각각 버튼을 눌렀을 때 해당하는 기능 동작 -->
+    <button id="add" onclick="add()">add</button>
+    <button id="sub" onclick="sub()">sub</button>
+    <button id="divide" onclick="divide()">divide</button>
+    <button id="mul" onclick="mul()">mul</button>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    let sum = 0;
+    let n = prompt("값 1부터 100까지");
+
+    for (let i = 0; i < n; i++) {
+      if (n >= 100) {
+        alert("100초과");
+        break;
+      }
+      if (i % 2 == 0 || i % 3 == 0) {
+        sum += i;
+      }
+    }
+
+    alert(sum);
+
+    // let n = prompt("점수 n 을 입력하세요. 단(, 0 < n < 100)");
+    // n = Number(n);
+    // let sum = 0;
+
+    // for (let i = 0; i < n; i++) {
+    //   if (n <= 100 && n >= 100) alert("다시 입력하센");
+    //   else {
+    //     if (i % 2 == 0 || i % 3 == 0) sum += i;
+    //   }
+    // }
+    // console.log("sum :", sum);
+  </script>
+  <body></body>
+</html>

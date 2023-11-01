@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //switch문
+      /*
+      switch (변수){
+        case 값1:
+            // 변수 == 값1일 때 실행할 코드
+            break; //break문을 만나면 witch를 빠져나오겠다.
+        case 값2:
+            // ~~코드
+            break;
+        default:
+            // 기본적으로 실행할 코드
+      }
+      */
+
+      let name = "Lee";
+
+      switch (name) {
+        case "kim":
+          console.log("name은 kim입니다");
+          break;
+        case "Lee":
+          console.log("name은 Lee입니다.");
+          break;
+        default:
+          console.log("kim도 lee도 아닙니다.");
+      }
+
+      // 3항 연산자
+
+      if (name == "Lee") {
+        console.log("name == lee");
+      } else {
+        console.log("name !=lee");
+      }
+
+      /*
+    조건식 ? 참일 때 실행할 코드 :  거짓일 때 코드
+    */
+
+      name1 = "Lee" ? console.log("맞습니다") : console.log(틀렷습니다);
+
+      name1 = "kim"
+        ? console.log("name == kim")
+        : name1 == "lee"
+        ? console.log("name != kim && name ==lee")
+        : console.log("name != kim && name = lee");
+    </script>
+  </head>
+  <body></body>
+</html>

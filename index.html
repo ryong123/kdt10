@@ -8,7 +8,7 @@
   <body>
     <button onclick="add()">add</button>
     <button onclick="sub()">sub</button>
-    <button onclick="divdie()">divide</button>
+    <button onclick="divide()">divide</button>
     <button onclick="mul()">mul</button>
 
     <script>
@@ -30,7 +30,7 @@
 
         // string -> number 형변환
         let result = Number(add) + Number(add2);
-        console.log("입력값:", add + "+" + add2 + "=" + result);
+        alert("더한 값: " + result);
       }
       function sub(sum1, sum2) {
         let add = prompt("첫번째 숫자를 입력해주세요");
@@ -38,7 +38,7 @@
 
         // string -> number 형변환
         let result = Number(add) - Number(add2);
-        console.log("입력값:", add + "-" + add2 + "=" + result);
+        alert("뺀 값: " + result);
       }
       function divide(sum1, sum2) {
         let add = prompt("첫번째 숫자를 입력해주세요");
@@ -46,7 +46,7 @@
 
         // string -> number 형변환
         let result = Number(add) * Number(add2);
-        console.log("입력값:", add + "x" + add2 + "=" + result);
+        alert("곱한 값: " + result);
       }
       function mul(sum1, sum2) {
         let add = prompt("첫번째 숫자를 입력해주세요");
@@ -54,7 +54,7 @@
 
         // string -> number 형변환
         let result = Number(add) / Number(add2);
-        console.log("입력값:", add + "/" + add2 + "=" + result);
+        alert("나눈 값: " + result);
       }
     </script>
   </body>
