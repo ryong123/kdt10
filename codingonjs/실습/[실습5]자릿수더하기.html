@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function solution(N) {
+    let sum = 0;
+
+    String(N).split('').forEach(digit => {
+        sum += Number(digit); //
+    });
+    return sum;
+}
+
+console.log(solution(123));  
+console.log(solution(987)); 
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

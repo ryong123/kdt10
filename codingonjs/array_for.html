@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array for문</title>
+    <script>
+        let fruits = ['apple', 'banana', 'oragne', 'melon', 'grape'];
+        console.log('---for basic');
+        for(let i =0;i < fruits.length; i++){
+            console.log(fruits[i]); // 'apple', 'banana', 'oragne', 'melon', 'grape'
+        }
+        
+        console.log('---for of');
+        for(let fruit of fruits){
+            console.log(fruit); //'apple', 'banana', 'oragne', 'melon', 'grape'
+        }
+
+        //forEach -> 반복
+        console.log('---forEach');
+        fruits.forEach((fruit, index, arr)=>{
+            console.log('fruit :', fruit);
+            console.log('index:', index);
+            console.log('arr: ', arr);
+        });
+
+        // 생략하면 뒤에 끝까지 채워 줄 것 2번째는 index 3번째는 arr 자리
+        fruits.forEach((fruit)=>{
+            console.log('fruit :', fruit);
+           // console.log('index:', index);
+           //  console.log('arr: ', arr);
+        });
+
+        // filter
+        console.log('---filter');
+        let filterResult = fruits.filter((fruits) =>{
+            return fruits.includes('p');
+        })      
+        //   let filterResult2 = fruits.filter(fruits=>fruit.includes('p'))
+        
+        console.log('filterResult: ',filterResult);
+
+    
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

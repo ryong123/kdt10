@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span>값1:</span>
+    <input id="input" type="text" placeholder="값1" value="" /><br />
+    <span>값2:</span>
+    <input id="input2" type="text" placeholder="값2" value="" /><br />
+    <span>연산자:</span>
+    <input id="operator" type="text" placeholder="연산자" /><br />
+    <span>결과:</span>
+    ><input id="result" type="text" placeholder="결과" value="" /><br />
+
+    <button onclick="calculateResult()">계산하기</button>
+    <button onclick="resetValues()">초기화</button>
+    <script>
+      let input = document.getElementById("input");
+      let input2 = document.getElementById("input2");
+      let operator = document.getElementById("operator");
+      let result = document.getElementById("result");
+      function calculateResult() {
+        if (operator.value === "+") {
+          result.value = Number(input.value) + Number(input2.value);
+        } else if (operator.value === "-") {
+          result.value = Number(input.value) - Number(input2.value);
+        } else if (operator.value === "*") {
+          result.value = Number(input.value) * Number(input2.value);
+        } else if (operator.value === "/") {
+          result.value = Number(input.value) / Number(input2.value);
+        }
+      }
+    </script>
+  </body>
+</html>

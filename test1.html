@@ -4,20 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script>
-      name = "kim";
-      switch (name) {
-        case "kim":
-          console.log("kim 맞습니다");
-          break;
-        case "lee":
-          console.log("kim 아니고 lee입니다.");
-          break;
-        case "park":
-          console.log("kim 아니고 park입니다.");
-          break;
-      }
-    </script>
   </head>
-  <body></body>
+  <body>
+    <div class="box" id="box1">hello</div>
+
+    <script>
+      let boxE1 = document.querySelector(".box");
+      console.log(boxE1.innerHTML);
+      let boxE2 = document.getElementById("box1");
+      console.log(boxE2);
+    </script>
+  </body>
 </html>
