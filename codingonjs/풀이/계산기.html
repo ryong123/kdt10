@@ -3,35 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>계산기</title>
   </head>
   <body>
-    <span>값1:</span>
-    <input id="input" type="text" placeholder="값1" value="" /><br />
-    <span>값2:</span>
-    <input id="input2" type="text" placeholder="값2" value="" /><br />
-    <span>연산자:</span>
-    <input id="operator" type="text" placeholder="연산자" /><br />
-    <span>결과:</span>
-    ><input id="result" type="text" placeholder="결과" value="" /><br />
+    <span>값1: <input id="val1" type="text" /></span> <br />
+    <span>값2: <input id="val2" type="text" /></span> <br />
+    <span>연산자: <input id="op" type="text" /></span> <br />
+    <span>결과: <input id="result" type="text" /></span> <br />
 
-    <button onclick="calculateResult()">계산하기</button>
-    <button onclick="resetValues()">초기화</button>
+    <!-- 버튼누르면 res 함수 작동할거임 -->
+    <button id="res" onclick="res()">계산</button>
+    <button onclick="reset()">초기화</button>
     <script>
-      let input = document.getElementById("input");
-      let input2 = document.getElementById("input2");
-      let operator = document.getElementById("operator");
+      // HTML에 각 ID가 val,val2, op, result로 되있는 요소들 가져오기
+      let val1 = document.getElementById("val1");
+      let val2 = document.getElementById("val2");
+      let op = document.getElementById("op");
       let result = document.getElementById("result");
-      function calculateResult() {
-        if (operator.value === "+") {
-          result.value = Number(input.value) + Number(input2.value);
-        } else if (operator.value === "-") {
-          result.value = Number(input.value) - Number(input2.value);
-        } else if (operator.value === "*") {
-          result.value = Number(input.value) * Number(input2.value);
-        } else if (operator.value === "/") {
-          result.value = Number(input.value) / Number(input2.value);
+
+      // 어떤 함수 작성할까?
+      // 값1, 값2를 더하기, 결과는 값1과 값2 더하면 00값 출력하기
+      // 값1, 값2를 빼기, 결과는 값1과 값2를 뺴면 00값 출력하기
+      // 값1, 값2를 곱하기, 결과는 값1과 값2를 곱하면 00 값 출력하기
+      // 값1, 값2를 나누기, 결과는 값1과 값2를 나누면 00 값 출력하기
+
+      // 사용할 수 있는 언어 : 만약에 ~~라면 결과를 ~~ 출력하기 => (if,switch)
+
+      function res() {
+        // 위에 가져온 val1 요소확인하고 그값을 value1에 저장한다
+        // 위에 가져온 val2 요소확인하고 그값을 value2에 저장한다
+        let value1 = parseFloat(val1.value);
+        let value2 = parseFloat(val2.value);
+        // op(연산자)의 값이 +, -, *, / 뭐가 들어가는지 확인해야한다.
+        switch (op.value) {
+          case "+":
+            result.value = value1 + value2;
+            break;
+          case "-":
+            result.value = value1 - value2;
+            break;
+          case "*":
+            result.value = value1 * value2;
+            break;
+          case "/":
+            result.value = value1 / value2;
+            break;
         }
+      }
+      function reset() {
+        // 값을 입력한 후 각각의 값1(val), 값2(val2), 연산자(op), 결과(result)입력되있는 값을 초기화한다.
+        val1.value = "";
+        val2.value = "";
+        op.value = "";
+        result.value = "";
       }
     </script>
   </body>

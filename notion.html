@@ -4,29 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      #box {
-        width: 500px;
-        height: 50px;
-        line-height: 50px;
-        text-align: center;
-        background-color: black;
-        border-radius: 10px;
-        color: white;
-      }
-    </style>
   </head>
+  <style>
+    th {
+      border: 1px solid black;
+    }
+  </style>
   <body>
-    <div id="box">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    <h1>방명록입니다.</h1>
+    <span>작성자 <input id="name" type="text" /></span> <br />
+    <span>내용 <input id="content" type="text" /></span> <br />
 
-    <button onclick="열기()">버튼</button>
-    <button onclick="document.getElementById('box').style.display='none'">
-      닫기
-    </button>
+    <button onclick="wirte()">작성</button>
+    <table style="border: 1px solid black">
+      <thead id="table">
+        <th>번호</th>
+        <th>작성자</th>
+        <th>내용</th>
+        <th>작성일</th>
+      </thead>
+    </table>
 
     <script>
-      function 열기() {
-        document.getElementById("box").style.display = "block";
+      // 작성 버튼을 누르면 name요소와 content 요소가 추가된다
+      // td태그가 생성되며 , 그밑에 자식요소로 tr 태그가 생성됨 tr태그에는 name요소와, conent요소가 들어감
+
+      let num = 1;
+      function wirte() {
+        let name = document.getElementById("name").value;
+        let content = document.getElementById("content").value;
+        let table = document.getElementById("table");
+
+        console.log(name);
+        console.log(content);
+
+        let newRow = table.insertRow();
+
+        let cell1 = newRow.insertCell(0);
+        let cell2 = newRow.insertCell(1);
+        let cell3 = newRow.insertCell(2);
+        let cell4 = newRow.insertCell(3);
+
+        cell1.innerHTML = num++;
+        cell2.innerHTML = name;
+        cell3.innerHTML = content;
+        cell4.innerHTML = new Date().toLocaleString();
+
+        console.log(cell2);
+
+        name.value = "";
+        content.value = "";
       }
     </script>
   </body>

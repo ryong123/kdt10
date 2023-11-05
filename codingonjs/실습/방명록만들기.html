@@ -7,9 +7,44 @@
   </head>
   <body>
     <span>작성자</span>
-    <input type="text" value="" /><br />
+    <input id="created" type="text" value="" /><br />
     <span>내용</span>
-    <input type="text" value="" /><br />
-    <button></button>
+    <input id="content" type="text" value="" /><br />
+    <button id="write" onclick="addRow()">작성</button>
+    <div id="tableContainer">
+      <table style="border: 1px solid black">
+        <thead>
+          <th>번호</th>
+          <th>작성자</th>
+          <th>내용</th>
+          <th>작성일</th>
+        </thead>
+      </table>
+    </div>
+
+    <script>
+      let rowNum = 1;
+      0;
+      function addRow() {
+        let created = document.getElementById("created");
+        let content = document.getElementById("content");
+        let table = document.querySelector("#tableContainer table");
+
+        let newRow = table.insertRow();
+
+        let newCell1 = newRow.insertCell(0);
+        let newCell2 = newRow.insertCell(1);
+        let newCell3 = newRow.insertCell(2);
+        let newCell4 = newRow.insertCell(3);
+
+        newCell1.innerHTML = rowNum++;
+        newCell2.innerHTML = created.value;
+        newCell3.innerHTML = content.value;
+        newCell4.innerHTML = new Date().toLocaleDateString();
+
+        created.value = "";
+        content.value = "";
+      }
+    </script>
   </body>
 </html>
