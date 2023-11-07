@@ -16,7 +16,7 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body class="dark">
     <div class="black-bg">
       <div class="white-bg">
         <h4>로그인하세요</h4>
@@ -51,6 +51,9 @@
           } else if (pwValue.length < 7) {
             alert("비밀번호 7자리 이상으로 작성하셈");
             event.preventDefault();
+          } else if (!/[A-Z]+/.test(pwValue)) {
+            alert("대문자 한개 이상 포함");
+            event.preventDefault();
           }
         }
       }
@@ -69,11 +72,30 @@
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <span class="navbar-brand">Navbar</span>
+        <span class="badge bg-dark">Dark 🔄</span>
         <button class="navbar-toggler" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
     </nav>
+
+    <script>
+      // badge 1회 클릭시 내부 글자를 Light로 변경
+      // badge 2회 클릭시 내부 글자를 Light로 변경
+
+      var count = 0;
+      document.querySelector(".badge").addEventListener("click", function () {
+        count += 1;
+        console.log(count);
+        if (count % 2 == 0) {
+          document.querySelector(".badge").innerHTML = "dark🔄";
+        } else {
+          document.querySelector(".badge").innerHTML = "white🔄";
+        }
+        document.querySelector(".dark").classList.toggle("dark1");
+      });
+    </script>
+
     <!-- UI먼저 디자인 -->
     <!-- 쇼 클래스 탈부착 하는방법 -->
     <ul class="list-group">
@@ -88,6 +110,30 @@
       <h4>Shirts on Sale</h4>
       <button id="login" class="btn btn-danger">로그인</button>
     </div>
+
+    <div>
+      <div class="slide-container">
+        <img src="" alt="" />
+      </div>
+      <div class="slide-box"><img src="" alt="" /></div>
+      <div class="slide-box"><img src="" alt="" /></div>
+    </div>
+
+    <div class="alert alert-danger">
+      <span id="num">5</span>
+      초이내 구매시 사은품 증정!
+    </div>
+
+    <script>
+      var count = 5;
+
+      setInterval(function () {
+        count -= 1;
+        if (count >= 0) {
+          document.querySelector("#num").innerHTML = count;
+        }
+      }, 1000);
+    </script>
 
     <script>
       document.getElementById("login").addEventListener("click", function () {
