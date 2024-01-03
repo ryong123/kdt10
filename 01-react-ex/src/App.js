@@ -2,6 +2,8 @@ import './App.css';
 import Food from './Food';
 import Book from './book';
 import ClassComponent from './ClassComponent';
+import StateCounter from './stateCounter';
+
 
 function App() {
   const name = '로이';
@@ -70,6 +72,10 @@ function App() {
         text="pros 전달"
         valid={my_func}
       />
+      <br /><br /><br /><br />
+
+      <hr />
+      <StateCounter />
       <br /><br /><br /><br />
     </div>
 
