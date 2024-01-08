@@ -3,7 +3,8 @@ import Food from './Food';
 import Book from './book';
 import ClassComponent from './ClassComponent';
 import StateCounter from './stateCounter';
-
+import Ex from './exAll/ex';
+import Select from './exAll/Select';
 
 function App() {
   const name = '로이';
@@ -76,6 +77,12 @@ function App() {
 
       <hr />
       <StateCounter />
+      <br /><br /><br /><br />
+
+      <hr />
+
+      <Ex />
+      <br /><br /><br /><br />
       <br /><br /><br /><br />
     </div>
 

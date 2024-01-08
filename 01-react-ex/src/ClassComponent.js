@@ -7,7 +7,7 @@ class ClassComponent extends Component {
         <h2>{text}</h2>
         <br />
         <button onClick={valid}>콘솔메세지</button>
-      </div>ㅈ
+      </div>
     );
   }
 }
