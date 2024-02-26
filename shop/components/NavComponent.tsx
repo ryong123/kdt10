@@ -10,7 +10,7 @@ export default function NavComponent() {
           <Link to="/">
             <div className="pl-2 sm:pl-10">HOME</div>
           </Link>
-          <Link to="best">
+          <Link to="Shop">
             <div className="pl-2 sm:pl-10">SHOP</div>
           </Link>
           <Link to="basket">
